@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6334F6371CCF0E250006B65E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6334F6361CCF0E250006B65E /* main.cpp */; };
+		6334F6451CCFEDD40006B65E /* ai.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6334F6431CCFEDD40006B65E /* ai.cpp */; };
+		6334F6521CCFFD4E0006B65E /* data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6334F6511CCFFD4E0006B65E /* data.cpp */; };
+		6334F6551CCFFDC80006B65E /* heuristic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6334F6541CCFFDC80006B65E /* heuristic.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,12 @@
 /* Begin PBXFileReference section */
 		6334F6331CCF0E250006B65E /* Chaos */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chaos; sourceTree = BUILT_PRODUCTS_DIR; };
 		6334F6361CCF0E250006B65E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6334F6431CCFEDD40006B65E /* ai.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ai.cpp; sourceTree = "<group>"; };
+		6334F64F1CCFEE320006B65E /* ai.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ai.h; sourceTree = "<group>"; };
+		6334F6501CCFEEE20006B65E /* positions.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = positions.py; sourceTree = SOURCE_ROOT; };
+		6334F6511CCFFD4E0006B65E /* data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = data.cpp; sourceTree = "<group>"; };
+		6334F6531CCFFD560006B65E /* data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = data.h; sourceTree = "<group>"; };
+		6334F6541CCFFDC80006B65E /* heuristic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = heuristic.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +66,13 @@
 		6334F6351CCF0E250006B65E /* Chaos */ = {
 			isa = PBXGroup;
 			children = (
+				6334F6501CCFEEE20006B65E /* positions.py */,
 				6334F6361CCF0E250006B65E /* main.cpp */,
+				6334F6511CCFFD4E0006B65E /* data.cpp */,
+				6334F6541CCFFDC80006B65E /* heuristic.cpp */,
+				6334F6531CCFFD560006B65E /* data.h */,
+				6334F64F1CCFEE320006B65E /* ai.h */,
+				6334F6431CCFEDD40006B65E /* ai.cpp */,
 			);
 			path = Chaos;
 			sourceTree = "<group>";
@@ -119,6 +134,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6334F6371CCF0E250006B65E /* main.cpp in Sources */,
+				6334F6451CCFEDD40006B65E /* ai.cpp in Sources */,
+				6334F6551CCFFDC80006B65E /* heuristic.cpp in Sources */,
+				6334F6521CCFFD4E0006B65E /* data.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +255,7 @@
 				6334F63C1CCF0E250006B65E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
