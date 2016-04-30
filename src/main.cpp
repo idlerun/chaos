@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include "ai.h"
 
 int main(int argc, const char * argv[]) {
