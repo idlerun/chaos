@@ -6,6 +6,7 @@ This is a basic AI for the game Order and Chaos.
 I heard about the game Order and Chaos from [Tom Scott's youtube video](https://www.youtube.com/watch?v=qsjVfJur1ac)
 
 The basics of the game are as follows:
+
 * Two players have a role assigned, one is ORDER, the other is CHAOS
 * The game board is a 6x6 grid
 * The players alternate playing. Either player plays either an X or an O
@@ -17,12 +18,14 @@ Simple AI with alpha-beta pruning
 
 ### Heuristic
 There are 32 possible sets of 5 positions which can be a WIN for the ORDER player.
+
 * 12 horizontal
 * 12 vertical
 * 4 diagonal \
 * 4 diagonal /
 
 The heuristic evaluates each of those 32 lines and assigns it a value.
+
 * If there is a combination of Xes and Oes, then the value is -1 since order cannot win that line.
 * Otherwise the score is positive and depends on the number of filled spaces in the line (XXX is valued higher than XX)
 
