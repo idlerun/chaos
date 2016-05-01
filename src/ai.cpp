@@ -13,7 +13,7 @@
  */
 // spiral out from the middle
 size_t position_order[36] = {
-    14,15,21,20,19,13,7,8,9,10,16,22,28,34,33,32,31,24,18,12,6,0,1,2,3,4,5,11,17,23,29,35
+    14,15,21,20,19,13,7,8,9,10,16,22,28,27,26,25,24,18,12,6,0,1,2,3,4,5,11,17,23,29,35,34,33,32,31,30
 };
 
 int alphabeta(board_t& board, const size_t depth, int alpha, int beta);
@@ -90,6 +90,7 @@ move_t ab_move(board_t& board, size_t depth) {
         result.ended = true;
         return result;
     }
+    bool resultSet = false;
     
     // copy of alphabeta but recording move position instead of value for return
     int alpha = NEG_INFINITY;
@@ -100,6 +101,12 @@ move_t ab_move(board_t& board, size_t depth) {
         for(size_t i=0; i<36; i++) {
             const size_t p = position_order[i];
             if (board.valueAt(p) == 0) {
+                if (!resultSet) {
+                    // force result to be SOME valid value
+                    resultSet = true;
+                    result.position = p;
+                    result.piece = PIECE_X;
+                }
                 // try both X and O before resetting board
                 playAlpha(board, alpha, beta, depth, p, PIECE_X);
                 if (alpha > result.value) {
@@ -122,6 +129,12 @@ move_t ab_move(board_t& board, size_t depth) {
         for(size_t i=0; i<36; i++) {
             const size_t p = position_order[i];
             if (board.valueAt(p) == 0) {
+                if (!resultSet) {
+                    // force result to be SOME valid value
+                    resultSet = true;
+                    result.position = p;
+                    result.piece = PIECE_X;
+                }
                 // try both X and O before resetting board
                 playBeta(board, alpha, beta, depth, p, PIECE_X);
                 if (beta < result.value) {

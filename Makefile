@@ -1,8 +1,7 @@
-all: chaos
-
-chaos:
+all:
 	g++ -O3 src/*.cpp -o chaos
+	g++ -O3 src/*.cpp -o order
 
 clean:
-	rm -f chaos
+	rm -f chaos order
 

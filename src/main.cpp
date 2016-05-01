@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
     board_t board(argv[1]);
     std::cerr << "Input board is: '" << board.toString() << "'" << std::endl;
     std::cerr << "Heuristic value: " << board.heuristic() << std::endl;
-    move_t m = ab_move(board, 5);
+    move_t m = ab_move(board, 6);
     std::cout << m.toString() << std::endl;
     board.flip_turn();
     board.play(m.position, m.piece);
