@@ -44,6 +44,7 @@ bool playBeta(board_t& board, const int alpha, int& beta,
     }
 }
 
+// this is the main alphabeta, returns a node value (or alpha/beta)
 int alphabeta(board_t& board, const size_t depth, int alpha, int beta) {
     if (depth == 0) {
         return board.heuristic();
@@ -81,6 +82,7 @@ int alphabeta(board_t& board, const size_t depth, int alpha, int beta) {
     }
 }
 
+// this is the alternate alphabeta which only runs at the top level and returns a move to play
 move_t ab_move(board_t& board, size_t depth) {
     if (depth > board.count_empty()) {
         depth = board.count_empty();

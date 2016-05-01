@@ -1,6 +1,8 @@
 #include <assert.h>
 #include "data.h"
 
+// implementation for all of the data.h functions other than heuristic()
+
 uint16_t fromChar(const char c) {
     if (c == 'X'){
         return PIECE_X;

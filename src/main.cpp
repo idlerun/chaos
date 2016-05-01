@@ -2,6 +2,10 @@
 #include <string.h>
 #include "ai.h"
 
+#ifndef DEPTH_LIMIT
+#define DEPTH_LIMIT 6
+#endif
+
 int main(int argc, const char * argv[]) {
     // set arguments with  command shift ,
     // example: "XO                                  c"
@@ -16,7 +20,9 @@ int main(int argc, const char * argv[]) {
     board_t board(argv[1]);
     std::cerr << "Input board is: '" << board.toString() << "'" << std::endl;
     std::cerr << "Heuristic value: " << board.heuristic() << std::endl;
-    move_t m = ab_move(board, 6);
+    // call the ai to pick a move!
+    move_t m = ab_move(board, DEPTH_LIMIT);
+    
     std::cout << m.toString() << std::endl;
     board.flip_turn();
     board.play(m.position, m.piece);
