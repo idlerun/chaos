@@ -1,4 +1,9 @@
-# Order and Chaos AI
+---
+title: "Order VS Chaos AI"
+tags: c++ ai
+date: 2016-05-01
+---
+
 
 This is a basic AI for the game Order and Chaos.
 
