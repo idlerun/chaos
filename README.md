@@ -1,5 +1,5 @@
 ---
-page: http://www.idle.run/chaos
+page: https://idle.run/chaos
 title: "Order VS Chaos AI"
 tags: c++ ai
 date: 2016-05-01
